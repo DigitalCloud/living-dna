@@ -1,0 +1,28 @@
+{
+  "name": "digitalcloud/living-dna",
+  "description": "",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1.0",
+    "laravel/framework": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "DigitalCloud\\LivingDna\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DigitalCloud\\LivingDna\\LivingDnaServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
