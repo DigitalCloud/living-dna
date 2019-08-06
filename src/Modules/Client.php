@@ -24,7 +24,7 @@ abstract class Client
 
 //            if ($route == 'api/order')
 //                dd($data);
-            return self::getResult((new GuzzleClient())->$func(config("dna.api_url") . "/$route", $data));
+            return self::getResult((new GuzzleClient())->$func(config("living-dna.api_url") . "/$route", $data));
         } catch (\Exception  $exception) {
             throw $exception;
             if (in_array($exception->getCode(), [403, 401])) {
