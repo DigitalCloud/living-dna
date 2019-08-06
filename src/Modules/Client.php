@@ -27,11 +27,6 @@ abstract class Client
             return self::getResult((new GuzzleClient())->$func(config("living-dna.api_url") . "/$route", $data));
         } catch (\Exception  $exception) {
             throw $exception;
-            if (in_array($exception->getCode(), [403, 401])) {
-                throw new UnauthorizedException("Unauthorized or Unauthenticated");
-            } else {
-                throw $exception;
-            }
         }
     }
 
