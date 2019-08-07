@@ -26,7 +26,6 @@ abstract class Client
 //                dd($data);
             return self::getResult((new GuzzleClient())->$func(config("living-dna.api_url") . "/$route", $data));
         } catch (\Exception  $exception) {
-            dd($parameters);
             throw $exception;
         }
     }
