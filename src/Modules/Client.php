@@ -22,8 +22,6 @@ abstract class Client
 
             $data["headers"] = array_merge($headers, self::getHeaders());
 
-//            if ($route == 'api/order')
-//                dd($data);
             return self::getResult((new GuzzleClient())->$func(config("living-dna.api_url") . "/$route", $data));
         } catch (\Exception  $exception) {
             throw $exception;

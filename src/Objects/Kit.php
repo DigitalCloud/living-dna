@@ -13,6 +13,25 @@ class Kit implements \JsonSerializable
     private $items;
     private $result;
 
+    const STATUS_ORDERED = 'ORDERED';
+    const STATUS_SHIPPED = 'SHIPPED';
+    const STATUS_DELIVERED = 'DELIVERED';
+    const STATUS_RECEIVED = 'RECEIVED';
+    const STATUS_IN_LAB = 'IN_LAB';
+    const STATUS_FAILED = 'FAILED';
+    const STATUS_READY = 'READY';
+    const STATUS_CANCELLED = 'CANCELLED';
+
+    public function isReady()
+    {
+        return $this->status == self::STATUS_READY;
+    }
+
+    public function isInLab()
+    {
+        return $this->status == self::STATUS_IN_LAB;
+    }
+
     /**
      * @return User
      */
