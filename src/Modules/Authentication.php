@@ -16,7 +16,7 @@ class Authentication extends Client
 
     public function refresh($refresh_token)
     {
-        return self::send('post', 'api/refresh', json_encode([
+        return self::send('post', 'api/auth/refresh', json_encode([
             'client_id' => config("living-dna.client_id"),
             'client_secret' => config("living-dna.client_secret"),
             'refresh_token' => $refresh_token
