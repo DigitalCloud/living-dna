@@ -32,6 +32,11 @@ class Kit implements \JsonSerializable
         return $this->status == self::STATUS_IN_LAB;
     }
 
+    public function isReceived()
+    {
+        return $this->status == self::RECEIVED;
+    }
+
     /**
      * @return User
      */
