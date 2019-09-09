@@ -34,7 +34,7 @@ class Kit implements \JsonSerializable
 
     public function isReceived()
     {
-        return $this->status == self::RECEIVED;
+        return $this->status == self::STATUS_RECEIVED;
     }
 
     /**
